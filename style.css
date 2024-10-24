@@ -1,0 +1,166 @@
+:root {
+  --Color-1: rgb(70, 155, 33);
+  --Color-2: rgb(52, 125, 21);
+  --Color-3: rgb(203, 65, 23);
+  --Color-4: rgb(236, 231, 254);
+  --Color-5: rgba(255, 255, 255, 0.914);
+  --Color-6: rgb(7, 10, 12);
+}
+
+:root {
+  --step--2: clamp(0.651rem, 0.4314rem + 1.0782vw, 1.24rem);
+  --step--1: clamp(0.7813rem, 0.4945rem + 1.4073vw, 1.55rem);
+  --step-0: clamp(0.9375rem, 0.5645rem + 1.8307vw, 1.9375rem);
+  --step-1: clamp(1.125rem, 0.6413rem + 2.3741vw, 2.4219rem);
+  --step-2: clamp(1.35rem, 0.7244rem + 3.0707vw, 3.0273rem);
+  --step-3: clamp(1.62rem, 0.8128rem + 3.9619vw, 3.7842rem);
+  --step-4: clamp(1.944rem, 0.9047rem + 5.1006vw, 4.7302rem);
+  --step-5: clamp(2.3328rem, 0.9975rem + 6.5537vw, 5.9128rem);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--Color-4);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  width: 75%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: var(--Color-5);
+  box-shadow: 0 0 10px var(--Color-4);
+  border-radius: 5px;
+}
+
+.input-container {
+  align-items: center;
+  width: 90%;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid var(--Color-2);
+  border-radius: 4px;
+  justify-content: center;
+  font-size: var(--step--1);
+}
+
+input[type="text"] {
+  width: 60%;
+  margin-left: 10%;
+}
+
+input[type="number"] {
+  width: 20%;
+}
+
+h1 {
+  color: var(--Color-2);
+  font-size: var(--step-5);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+h2 {
+  color: var(--Color-2);
+  font-size: var(--step-4);
+}
+
+p {
+  color: var(--Color-6);
+  font-size: var(--step-1);
+  margin: 0 17% 3% 17%;
+}
+
+/* Styling for generelle knapper */
+button {
+  padding: 8px 12px;
+  border: none;
+  color: var(--Color-5);
+  font-size: var(--step--1);
+  background-color: var(--Color-3);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button#start-btn,
+button#submit-btn {
+  padding: 10px 30px;
+  border: none;
+  background-color: var(--Color-4);
+  font-size: var(--step-0);
+  color: var(--Color-6);
+  border-radius: 3px;
+  margin: 2%;
+}
+
+button#start-btn:hover,
+button#submit-btn:hover {
+  transform: scale(1.05);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--Color-5);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: var(--step-0);
+}
+
+li .task-toggle {
+  color: var(--Color-3);
+  margin-right: 10px;
+}
+
+.completed-task .task-toggle {
+  color: var(--Color-2);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#congratulations-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--Color-5);
+  border: 2px solid var(--Color-2);
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+#congratulations-message h3 {
+  color: var(--Color-2);
+  font-size: var(--step-2);
+  margin: 2%;
+}
+
+#close-message {
+  padding: 8px 30px;
+  border: none;
+  color: var(--Color-5);
+  background-color: var(--Color-3);
+  border-radius: 3px;
+  margin: 2%;
+}
+
+#close-message:hover {
+  transform: scale(1.05);
+}

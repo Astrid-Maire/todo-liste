@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo liste</title>
+    <title>Todo Liste</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <section id="welcome-screen" class="screen">
+        <div class="container">
+            <h1>Velkommen til din todo liste app</h1>
+            <p>Klik på knappen herunder for at starte din ToDo Liste.</p>
+            <button id="start-btn">Start To-Do Liste</button>
+        </div>
+    </section>
 
+    <section id="todo-screen" class="screen" style="display: none;">
+        <div class="container">
+            <h2>Din todo liste</h2>
+            <form id="todo-form">
+                <div class="input-container">
+                    <input type="text" id="new-task" placeholder="Tilføj opgave" required>
+                    <input type="number" id="task-quantity" placeholder="Antal" min="1" required>
+                </div>
+                <button id="submit-btn">Tilføj</button>
+            </form>
+            <ul id="task-list">
+            </ul>
+            <ul id="completed-list">
+            </ul>
+        </div>
+    </section>
+    <div id="congratulations-message" style="display: none;">
+        <h3>Tillykke med at du er færdig!</h3>
+        <button id="close-message">Luk</button>
+    </div>
 
-    </header>
-    <main>
-
-
-    </main>
-    <footer>
-
-
-    </footer>
-
+    <script src="javescript.js"></script>
 </body>
 
 </html>
